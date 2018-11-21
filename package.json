@@ -1,0 +1,34 @@
+{
+  "name": "athenamobilecrm",
+  "version": "1.0.0",
+  "description": "Athena Mobile Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Athena",
+    "Mobile"
+  ],
+  "author": "Sathish",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "joi": "^14.0.6",
+    "jsonwebtoken": "^8.4.0",
+    "md5": "^2.2.1",
+    "moment": "^2.22.2",
+    "morgan": "^1.9.1",
+    "msnodesqlv8": "^0.6.9",
+    "mssql": "^4.2.3",
+    "node-datetime": "^2.1.2",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "rotating-file-stream": "^1.3.9",
+    "uid-generator": "^1.0.0"
+  }
+}
