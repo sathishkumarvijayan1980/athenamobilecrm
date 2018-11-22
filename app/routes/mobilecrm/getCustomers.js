@@ -2,6 +2,11 @@ const express = require("express");
 const Request = express().request;
 const Response = express().response;
 const joi = require("joi");
+
+var sql = require("mssql/msnodesqlv8");
+
+var sqlConnection = require("../../utility/sqlConnection");
+
 const {
   crmCodes,
   errorCodes
@@ -41,12 +46,25 @@ module.exports = async function getCustomers(req, res, next) {
         });
       } else {
         try {
-          res.json({
-            data: {
-              "address": "AshokNagar",
-              "age": "38",
-              "gender": "Male"
-            }
+          return new Promise((resolve, reject) => {
+            sqlConnection.getConnection().then(pool => {
+              const request = new sql.Request(pool);
+              request.query('sp_getmonthwiserevenue', (nerr, recordsets, returnValue, affected) => {
+                if (nerr) {
+                  sqlConnection.closeConnectionAndReject(sql, reject, nerr);
+                } else {
+                 // console.log(recordsets)
+                  sqlConnection.closeConnectionAndResolve(sql, resolve, {
+                    Data: recordsets.recordset
+                  });
+                }
+                res.json({
+                  recordsets
+                })
+              });
+            }).catch(err => {
+              reject(err);
+            })
           });
         } catch (error) {
           res.status(errorCodes.INTERNAL_SERVER_ERROR.Value);
