@@ -55,12 +55,10 @@ module.exports = async function getCustomers(req, res, next) {
                 } else {
                  // console.log(recordsets)
                   sqlConnection.closeConnectionAndResolve(sql, resolve, {
-                    Data: recordsets.recordset
+                    
                   });
                 }
-                res.json({
-                  recordsets
-                })
+                res.json(recordsets.recordset)
               });
             }).catch(err => {
               reject(err);

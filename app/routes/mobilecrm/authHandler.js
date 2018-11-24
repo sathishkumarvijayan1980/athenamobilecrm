@@ -83,7 +83,7 @@ exports.authenticateUser = async (req, res, next) => {
                 }).catch(err => {
                     res.status(500);
                     res.send({
-                        ...spmsCodes.SERVER_ERR,
+                        ...crmCodes.SERVER_ERR,
                         data: err
                     })
                 });
@@ -126,7 +126,7 @@ exports.generateAuthXToken = async (req, res, next) => {
             if (err) {
                 res.status(400);
                 res.json({
-                    ...spmsCodes.PARAM_ERR,
+                    ...crmCodes.PARAM_ERR,
                     data: err
                 })
             } else {
