@@ -2,7 +2,7 @@ module.exports = {
     app: {
         prod: {
             port: 1337,
-            domain: "https://mobilecrmapi.azurewebsites.net",
+            domain: "./",
             db: {
                 server: 'athenaproduction.database.windows.net',
                 database: 'athena',
