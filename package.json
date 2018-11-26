@@ -27,7 +27,7 @@
     "md5": "^2.2.1",
     "moment": "^2.22.2",
     "morgan": "^1.9.1",
-    "msnodesqlv8": "^0.6.9",
+    "msnodesqlv8": "^0.6.11",
     "mssql": "^4.2.3",
     "node-datetime": "^2.1.2",
     "path": "^0.12.7",
