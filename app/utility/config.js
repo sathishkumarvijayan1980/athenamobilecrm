@@ -15,7 +15,7 @@ module.exports = {
                     requestTimeout: 300000
                 },
                 options: {
-                    encrypt: false
+                    encrypt: true
                 },
                 parseJSON: true
             }
