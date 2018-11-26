@@ -1,4 +1,4 @@
-var sql = require("mssql/msnodesqlv8");
+var sql = require("mssql");
 var sqlConnection = require("../utility/sqlConnection");
 var moment = require("moment");
 

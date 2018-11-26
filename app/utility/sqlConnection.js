@@ -1,5 +1,5 @@
 var config = require('../utility/config');
-var sql = new require("mssql/msnodesqlv8");
+var sql = new require("mssql");
 
 exports.getConnection = function () {
     const sqlConfig = config.app.prod.db;

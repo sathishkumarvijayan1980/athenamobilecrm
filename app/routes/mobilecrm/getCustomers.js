@@ -3,7 +3,7 @@ const Request = express().request;
 const Response = express().response;
 const joi = require("joi");
 
-var sql = require("mssql/msnodesqlv8");
+var sql = require("mssql");
 
 var sqlConnection = require("../../utility/sqlConnection");
 

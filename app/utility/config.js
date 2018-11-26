@@ -6,7 +6,6 @@ module.exports = {
             db: {
                 server: 'athenaproduction.database.windows.net',
                 database: 'athena',
-                driver: "msnodesqlv8",
                 user: 'athena',
                 password: 'Appa2709$$',
                 port: 1433,
