@@ -9,12 +9,15 @@ const bodyParser = require('body-parser');
 var crmRouter = require("./app/routes/mobilecrm")
 
 const app = express();
-
+var corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
 //const port = 3002;
 
 const port = process.env.PORT || 1337;
 
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(bodyParser.json());
 app.use(express.urlencoded({
     extended: false
